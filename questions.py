@@ -29,8 +29,8 @@ correct_answers_index = [1, 2, 0, 3, 1]
 
 score = 0.0
 
-# Se combinan las tres listas en una sola lista de tuplas (pregunta, respuestas e indice correcto)
-questions_to_ask = random.choices(list(zip(questions, answers, correct_answers_index)), k=3)
+# Se combinan las tres listas en una sola lista de tuplas (pregunta, respuestas e indice correcto) y se seleccionan tres preguntas
+questions_to_ask = random.sample(list(zip(questions, answers, correct_answers_index)), k=3)
 
 # El usuario deberá contestar 3 preguntas
 for question, answer_options, correct_answers_index in questions_to_ask:
